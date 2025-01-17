@@ -1,11 +1,7 @@
 <?php 
 
-
-
 include_once('config.php');
 
-
-// Configuration option.
 
 $recipent_address = CONTACT_FORM_RECIPIENT;
 $default_subject = CONTACT_DEFAULT_SUBJECT;
@@ -25,18 +21,8 @@ if(!$validate){
 
 $subject = $default_subject;
 
-
-// Configuration option.
-// i.e. The standard subject will appear as, "You've been contacted by John Doe."
-
-// Example, $e_subject = '$name . ' has contacted you via Your Website.';
-
 $e_subject = 'You have been contacted by ' . $name . '.';
 
-
-// Configuration option.
-// You can change this if you feel that you need to.
-// Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
 $e_body = "You have been contacted by $name. Their additional message is as follows." . PHP_EOL . PHP_EOL;
 $e_content = "Subject : $subject"  . PHP_EOL . PHP_EOL;
